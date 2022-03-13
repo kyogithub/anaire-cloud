@@ -5,8 +5,8 @@ exec 2>&1
 sudo apt update && sudo apt install -y jq unzip git snapd
 
 #====================VARIABLES==============================
-export PUBLIC_IP=$(hostname -I)
-export GRAFANA_ADMIN_PASSWORD="your_password"
+export PUBLIC_IP=192.168.2.102
+export GRAFANA_ADMIN_PASSWORD="daniel2022"
 #===========================================================
 
 #==============Initialize /data if needed===================
@@ -34,7 +34,7 @@ echo "alias helm='microk8s.helm3'" >> $HOME/.bashrc
 
 #================Install anaire cloud stack=================
 cd $HOME
-git clone https://github.com/anaireorg/anaire-cloud.git
+git clone https://github.com/danielbernalb/anaire-cloud.git
 ln -s anaire-cloud/stack/virtualbox/delete_stack.sh
 ln -s anaire-cloud/stack/virtualbox/upgrade_stack.sh
 ln -s anaire-cloud/stack/virtualbox/start_stack.sh
