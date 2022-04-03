@@ -23,10 +23,10 @@ spec:
               subPath: mosquitto.conf
           resources:
             requests:
-              memory: "50Mi"
-              cpu: "50m"
+              memory: "80Mi"
+              cpu: "80m"
             limits:
-              memory: "50Mi"
+              memory: "100Mi"
               cpu: "100m"
       volumes:
         - name: mqtt-storage-volume
