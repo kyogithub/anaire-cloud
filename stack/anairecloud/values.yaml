@@ -26,10 +26,10 @@ smtp_from: your sender name
 resources:
   mqttbroker:
     requests:
-      memory: "150Mi"
+      memory: "80Mi"
       cpu: "50m"
     limits:
-      memory: "200Mi"
+      memory: "100Mi"
       cpu: "100m"
   mqttforward:
     requests:
