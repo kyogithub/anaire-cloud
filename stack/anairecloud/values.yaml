@@ -61,12 +61,14 @@ resources:
       cpu: "500m"
   grafanaimagerenderer:
     requests:
-      memory: "1Gi"
+      memory: "1.5Gi"
       cpu: "500m"
+      ephemeral-storage: 2.5Gi
 #      cpu: "100m"
     limits:
-      memory: "1Gi"
+      memory: "1.5Gi"
       cpu: "500m"
+      ephemeral-storage: 3Gi
 #      cpu: "100m"
   apiserver:
     requests:
