@@ -26,84 +26,84 @@ smtp_from: your sender name
 resources:
   mqttbroker:
     requests:
-      memory: "80Mi"
-      cpu: "50m"
+      memory: "150Mi"
+      cpu: "150m"
       ephemeral-storage: "160Mi"
     limits:
-      memory: "100Mi"
-      cpu: "100m"
+      memory: "200Mi"
+      cpu: "200m"
       ephemeral-storage: "200Mi"
   mqttforward:
     requests:
-      memory: "100Mi"
-      cpu: "50m"
+      memory: "200Mi"
+      cpu: "150m"
       ephemeral-storage: "200Mi"
     limits:
-      memory: "100Mi"
-      cpu: "100m"
+      memory: "200Mi"
+      cpu: "200m"
       ephemeral-storage: "200Mi"
   pushgateway:
     requests:
-      memory: "100Mi"
-      cpu: "100m"
-      ephemeral-storage: "200Mi"
-    limits:
-      memory: "100Mi"
+      memory: "200Mi"
       cpu: "200m"
       ephemeral-storage: "200Mi"
+    limits:
+      memory: "300Mi"
+      cpu: "300m"
+      ephemeral-storage: "300Mi"
   prometheus:
     requests:
-      memory: "512Mi"
-      cpu: "100m"
+      memory: "712Mi"
+      cpu: "200m"
       ephemeral-storage: "1Gi"
     limits:
-      memory: "512Mi"
+      memory: "800Mi"
       cpu: "500m"
       ephemeral-storage: "1Gi"
   grafana:
     requests:
-      memory: "256Mi"
-      cpu: "100m"
+      memory: "356Mi"
+      cpu: "200m"
       ephemeral-storage: "512Mi"
     limits:
-      memory: "256Mi"
+      memory: "512Mi"
       cpu: "500m"
       ephemeral-storage: "512Mi"
   grafanaimagerenderer:
     requests:
       memory: "1.2Gi"
       cpu: "500m"
-      ephemeral-storage: "2.4Gi"
+      ephemeral-storage: "2Gi"
 #      cpu: "100m"
     limits:
       memory: "1.5Gi"
-      cpu: "500m"
-      ephemeral-storage: "3Gi"
+      cpu: "800m"
+      ephemeral-storage: "2.5Gi"
 #      cpu: "100m"
   apiserver:
     requests:
-      memory: "100Mi"
-      cpu: "100m"
+      memory: "150Mi"
+      cpu: "150m"
       ephemeral-storage: "200Mi"
     limits:
-      memory: "100Mi"
-      cpu: "100m"
-      ephemeral-storage: "200Mi"
+      memory: "200Mi"
+      cpu: "200m"
+      ephemeral-storage: "300Mi"
   cleanercronjob:
     requests:
-      memory: "50Mi"
-      cpu: "100m"
-      ephemeral-storage: "100Mi"
-    limits:
       memory: "100Mi"
-      cpu: "100m"
-      ephemeral-storage: "100Mi"
+      cpu: "150m"
+      ephemeral-storage: "200Mi"
+    limits:
+      memory: "200Mi"
+      cpu: "200m"
+      ephemeral-storage: "300Mi"
   nginx:
     requests:
-      memory: "100Mi"
-      cpu: "100m"
+      memory: "150Mi"
+      cpu: "150m"
       ephemeral-storage: "200Mi"
     limits:
-      memory: "100Mi"
-      cpu: "100m"
-      ephemeral-storage: "200Mi"
+      memory: "200Mi"
+      cpu: "200m"
+      ephemeral-storage: "300Mi"
