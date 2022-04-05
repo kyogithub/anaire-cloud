@@ -26,13 +26,13 @@ smtp_from: your sender name
 resources:
   mqttbroker:
     requests:
-      memory: "100Mi"
-      cpu: "75m"
-      ephemeral-storage: "200Mi"
+      memory: "250Mi"
+      cpu: "100m"
+      ephemeral-storage: "350Mi"
     limits:
-      memory: "200Mi"
+      memory: "350Mi"
       cpu: "150m"
-      ephemeral-storage: "300Mi"
+      ephemeral-storage: "450Mi"
   mqttforward:
     requests:
       memory: "150Mi"
@@ -62,23 +62,23 @@ resources:
       ephemeral-storage: "1.5Gi"
   grafana:
     requests:
-      memory: "500Mi"
+      memory: "400Mi"
       cpu: "200m"
-      ephemeral-storage: "1G"
+      ephemeral-storage: "800Mi"
     limits:
       memory: "800Mi"
-      cpu: "600m"
-      ephemeral-storage: "1.5Gi"
+      cpu: "500m"
+      ephemeral-storage: "1.2Gi"
   grafanaimagerenderer:
     requests:
-      memory: "2Gi"
-      cpu: "500m"
-      ephemeral-storage: "3Gi"
+      memory: "1.8Gi"
+      cpu: "450m"
+      ephemeral-storage: "2.5Gi"
 #      cpu: "100m"
     limits:
-      memory: "3Gi"
-      cpu: "800m"
-      ephemeral-storage: "5Gi"
+      memory: "2.5Gi"
+      cpu: "700m"
+      ephemeral-storage: "4Gi"
 #      cpu: "100m"
   apiserver:
     requests:
@@ -100,10 +100,10 @@ resources:
       ephemeral-storage: "300Mi"
   nginx:
     requests:
-      memory: "150Mi"
-      cpu: "150m"
-      ephemeral-storage: "200Mi"
-    limits:
-      memory: "200Mi"
+      memory: "250Mi"
       cpu: "200m"
-      ephemeral-storage: "300Mi"
+      ephemeral-storage: "350Mi"
+    limits:
+      memory: "350Mi"
+      cpu: "300m"
+      ephemeral-storage: "450Mi"
