@@ -74,10 +74,13 @@ data:
         if device_id:
             msg = 'PM25 ' + str(payload.pop('PM25', 0)) + '\n' + \
                   'CO2 ' + str(payload.pop('CO2', 0)) + '\n' + \
+                  'VOC ' + str(payload.pop('VOC', 0)) + '\n' + \
+                  'NOx ' + str(payload.pop('NOx', 0)) + '\n' + \
                   'Temperature ' + str(payload.pop('temperature', 0)) + '\n' + \
                   'Humidity ' + str(payload.pop('humidity', 0)) + '\n' + \
                   'Latitude ' + str(payload.pop('latitude', 0)) + '\n' + \
-                  'Longitude ' + str(payload.pop('longitude', 0)) + '\n'
+                  'Longitude ' + str(payload.pop('longitude', 0)) + '\n' + \
+                  'Datavar ' + str(payload.pop('datavar', 0)) + '\n'
             URL  = 'http://' + sys.argv[1] + ':9091/metrics/job/' + str(device_id)
             pushdata(msg, URL)
         else:
