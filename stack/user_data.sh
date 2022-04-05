@@ -6,7 +6,7 @@ sudo apt update && sudo apt install -y jq unzip git snapd
 
 #====================VARIABLES==============================
 #export PUBLIC_IP=ip a l enp0s3 | awk '($1=="inet"){split($2,a,"/");print a[1]}'
-export PUBLIC_IP=192.168.2.104
+export PUBLIC_IP=192.168.2.101
 export GRAFANA_ADMIN_PASSWORD="daniel2022"
 #===========================================================
 
@@ -39,5 +39,5 @@ git clone --branch cambios1ultver https://github.com/danielbernalb/anaire-cloud.
 ln -s anaire-cloud/stack/virtualbox/delete_stack.sh
 ln -s anaire-cloud/stack/virtualbox/upgrade_stack.sh
 ln -s anaire-cloud/stack/virtualbox/start_stack.sh
-sudo microk8s.helm3 install --set tls=false --set publicIP=$PUBLIC_IP --set grafanaAdminPass=$GRAFANA_ADMIN_PASSWORD anairestack anaire-cloud/stack/anairecloud
+sudo microk8s.helm3 install --set tls=true --set publicIP=$PUBLIC_IP --set grafanaAdminPass=$GRAFANA_ADMIN_PASSWORD anairestack anaire-cloud/stack/anairecloud
 #===========================================================
