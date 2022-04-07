@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx:1.21.6-alpine
+#          image: nginx:1.20.2-alpine
+          image: nginx:1.19.6-alpine
           {{- if eq .Values.tls true }}
           command: ["sh"]
           args: ["-c","/scripts/run.sh"]
@@ -40,7 +41,8 @@ spec:
             protocol: TCP
       initContainers:
         - name: copyfile
-          image: nginx:1.21.6-alpine
+#          image: nginx:1.20.2-alpine
+          image: nginx:1.19.6-alpine
           volumeMounts:
             - name: confd
               mountPath: /confd
