@@ -73,17 +73,17 @@ data:
         }
 
         location ~ ^/(panel|live|kiosk)  {
-            rewrite ^(.*)$ http://$host?kiosk break;
+            rewrite ^(.*)$ https://$host?kiosk break;
         }
 
         location ~ ^/(sensor|device|dispositivo|medidor|view|unidad|unit) {
-            rewrite /(.*)/(.*)/(.*) http://$host/d/lastvalue?var-uid=$2&var-name=$3&kiosk  break;
-            rewrite /(.*)/(.*) http://$host/d/lastvalue?var-uid=$2&kiosk  break;
+            rewrite /(.*)/(.*)/(.*) https://$host/d/lastvalue?var-uid=$2&var-name=$3&kiosk  break;
+            rewrite /(.*)/(.*) https://$host/d/lastvalue?var-uid=$2&kiosk  break;
         }
 
         location ~ ^/(admin|detalle|detail|edit|editor) {
-            rewrite /(.*)/(.*)/(.*) http://$host/d/lastvalue?var-uid=$2&var-name=$3  break;
-            rewrite /(.*)/(.*) http://$host/d/lastvalue?var-uid=$2  break;
+            rewrite /(.*)/(.*)/(.*) https://$host/d/lastvalue?var-uid=$2&var-name=$3  break;
+            rewrite /(.*)/(.*) https://$host/d/lastvalue?var-uid=$2  break;
         }
             
         #error_page  404              /404.html;
