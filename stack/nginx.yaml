@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
         - name: nginx
-#          image: nginx:1.20.2-alpine
-          image: nginx:1.19.6-alpine
+          image: nginx:1.20.2-alpine
           volumeMounts:
             - name: confd
               mountPath: /etc/nginx/conf.d/
@@ -35,8 +34,7 @@ spec:
             protocol: TCP
       initContainers:
         - name: copyfile
-#          image: nginx:1.20.2-alpine
-          image: nginx:1.19.6-alpine
+          image: nginx:1.20.2-alpine
           volumeMounts:
             - name: confd
               mountPath: /confd
