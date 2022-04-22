@@ -80,6 +80,8 @@ data:
                   'Humidity ' + str(payload.pop('humidity', 0)) + '\n' + \
                   'Latitude ' + str(payload.pop('latitude', 0)) + '\n' + \
                   'Longitude ' + str(payload.pop('longitude', 0)) + '\n' + \
+                  'RSSI ' + str(payload.pop('RSSI', 0)) + '\n' + \
+                  'Noise ' + str(payload.pop('noisedba', 0)) + '\n' + \
                   'Datavar ' + str(payload.pop('datavar', 0)) + '\n'
             URL  = 'http://' + sys.argv[1] + ':9091/metrics/job/' + str(device_id)
             pushdata(msg, URL)
