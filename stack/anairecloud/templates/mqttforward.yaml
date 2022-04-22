@@ -82,7 +82,8 @@ data:
                   'Longitude ' + str(payload.pop('longitude', 0)) + '\n' + \
                   'RSSI ' + str(payload.pop('RSSI', 0)) + '\n' + \
                   'Noise ' + str(payload.pop('noisedba', 0)) + '\n' + \
-                  'Datavar ' + str(payload.pop('datavar', 0)) + '\n'
+                  'Var1 ' + str(payload.pop('datavar1', 0)) + '\n' + \
+                  'Var2 ' + str(payload.pop('datavar2', 0)) + '\n'
             URL  = 'http://' + sys.argv[1] + ':9091/metrics/job/' + str(device_id)
             pushdata(msg, URL)
         else:
