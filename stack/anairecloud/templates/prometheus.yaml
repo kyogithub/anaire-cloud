@@ -7,7 +7,7 @@ metadata:
 data:
   prometheus.yml: |-
     global:
-      scrape_interval: 1s
+      scrape_interval: 5s
       evaluation_interval: 60s
 
     scrape_configs:
@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: prometheus
-          image: prom/prometheus:v2.34.0
+          image: prom/prometheus:v2.35.0
           args:
             - "--config.file=/etc/prometheus/prometheus.yml"
             - "--storage.tsdb.path=/prometheus/"
