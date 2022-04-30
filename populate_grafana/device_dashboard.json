@@ -47,7 +47,7 @@
       "renderer": "flot",
       "seriesOverrides": [
       {
-        "alias": "CO2",
+        "alias": "PM25",
         "yaxis": 1
       }
       ],
