@@ -46,7 +46,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "alias": "CO2",
+          "alias": "PM25",
           "yaxis": 1
         }
       ],
@@ -55,7 +55,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "CO2{exported_job=\"$uid\"}",
+          "expr": "PM25{exported_job=\"$uid\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{__name__}}",
@@ -83,7 +83,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "CO2 ppm",
+      "title": "PM25 ug/m3",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -101,7 +101,7 @@
       "yaxes": [
         {
           "decimals": 0,
-          "format": "ppm",
+          "format": "ug/m3",
           "label": null,
           "logBase": 1,
           "max": null,
