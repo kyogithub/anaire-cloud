@@ -14,10 +14,10 @@ messages:
 
     english:
         device_dashboard:
-            CO2:
-                title: 'CO2 ppm'
+            PM25:
+                title: 'PM25 ug/m3'
                 description:
-                - 'CO2 concentration in '
+                - 'PM25 concentration in '
                 - ' measured by device '
             temperature:
                 title: 'Temperature ºC'
@@ -38,10 +38,10 @@ messages:
 
     spanish:
         device_dashboard:
-            CO2:
-                title: 'CO2 ppm'
+            PM25:
+                title: 'PM25 ug/m3'
                 description:
-                - 'Concentración de CO2 en '
+                - 'Concentración de Material Particulado PM2.5 en '
                 - ' medido por el dispositivo '
             temperature:
                 title: 'Temperatura ºC'
