@@ -369,7 +369,7 @@ def main():
         detail_json['dashboard']['uid'] = re.sub('[^A-Za-z0-9]+', '', unidecode.unidecode(folder['title'])).lower()+'det'
         detail_json['folderId'] = folderId
 
-        detail_json['dashboard']['panels'][0]['title'] = dashboard_config['messages'][language]['device_dashboard']['CO2']['title']
+        detail_json['dashboard']['panels'][0]['title'] = dashboard_config['messages'][language]['device_dashboard']['PM25']['title']
         detail_json['dashboard']['panels'][1]['title'] = dashboard_config['messages'][language]['device_dashboard']['temperature']['title']
         detail_json['dashboard']['panels'][2]['title'] = dashboard_config['messages'][language]['device_dashboard']['humidity']['title']
 
@@ -408,7 +408,7 @@ def main():
 
 
           #Add device to the area device dashboards
-          detail_json['dashboard']['panels'][0]['targets'].append({'expr': "CO2{exported_job=\""+str(dev_uid)+"\"}", 'legendFormat': dev_name, 'refId': str(dev_uid)})
+          detail_json['dashboard']['panels'][0]['targets'].append({'expr': "PM25{exported_job=\""+str(dev_uid)+"\"}", 'legendFormat': dev_name, 'refId': str(dev_uid)})
           detail_json['dashboard']['panels'][1]['targets'].append({'expr': "Temperature{exported_job=\""+str(dev_uid)+"\"}", 'legendFormat': dev_name, 'refId': str(dev_uid)})
           detail_json['dashboard']['panels'][2]['targets'].append({'expr': "Humidity{exported_job=\""+str(dev_uid)+"\"}", 'legendFormat': dev_name, 'refId': str(dev_uid)})
 
@@ -436,10 +436,10 @@ def main():
                       '&var-ABC=OFF&var-reboot=OFF' + \
                       '&var-factory_reset=OFF'
             }]
-            dashboard_json['dashboard']['panels'][0]['title'] = dashboard_config['messages'][language]['device_dashboard']['CO2']['title']
-            dashboard_json['dashboard']['panels'][0]['description'] = dashboard_config['messages'][language]['device_dashboard']['CO2']['description'][0] + str(dev_name) + \
-              dashboard_config['messages'][language]['device_dashboard']['CO2']['description'][1] + str(dev_uid)
-            dashboard_json['dashboard']['panels'][0]['targets'][0]['expr'] = "CO2{exported_job=\""+str(dev_uid)+"\"}"
+            dashboard_json['dashboard']['panels'][0]['title'] = dashboard_config['messages'][language]['device_dashboard']['PM25']['title']
+            dashboard_json['dashboard']['panels'][0]['description'] = dashboard_config['messages'][language]['device_dashboard']['PM25']['description'][0] + str(dev_name) + \
+              dashboard_config['messages'][language]['device_dashboard']['PM25']['description'][1] + str(dev_uid)
+            dashboard_json['dashboard']['panels'][0]['targets'][0]['expr'] = "PM25{exported_job=\""+str(dev_uid)+"\"}"
             dashboard_json['dashboard']['panels'][0]['thresholds'][0]['value'] = dashboard_config['overview_dashboards']['thresholds']['warning']
             dashboard_json['dashboard']['panels'][0]['thresholds'][1]['value'] = dashboard_config['overview_dashboards']['thresholds']['caution']
 
@@ -465,7 +465,7 @@ def main():
             caution = dashboard_config['overview_dashboards']['thresholds']['caution']
           valid_ids.append(device_dashboard['id'])
 
-          #Create device CO2 panel
+          #Create device PM25 panel
           device_panel_url='http://' + GRAFANA_IP + '/d/' + device_dashboard['uid']
           device_panel_json = json.loads(device_panel_template_json)
           device_panel_json['type'] = panel_type
@@ -491,14 +491,14 @@ def main():
           device_panel_json["gridPos"]['y'] = 0
           device_panel_json["gridPos"]['w'] = w_panel
           device_panel_json["gridPos"]['h'] = h_panel
-          device_panel_json['targets'][0]['expr'] = "CO2{exported_job=\""+str(dev_uid)+"\"}"
+          device_panel_json['targets'][0]['expr'] = "PM25{exported_job=\""+str(dev_uid)+"\"}"
           device_panel_json['fieldConfig']['defaults']['thresholds']['steps'][2]['value'] = warning
           device_panel_json['fieldConfig']['defaults']['thresholds']['steps'][3]['value'] = caution
           device_panel_json['id'] = cont3+2
           if panel_type == 'stat':
             device_panel_json['options']['colorMode'] = 'background'
             device_panel_json['options']['graphMode'] = 'none'
-            device_panel_json['targets'][0]['legendFormat'] = dashboard_config['messages'][language]['device_dashboard']['CO2']['title']
+            device_panel_json['targets'][0]['legendFormat'] = dashboard_config['messages'][language]['device_dashboard']['PM25']['title']
             device_panel_json['targets'].append({'expr': "Temperature{exported_job=\""+str(dev_uid)+"\"}"})
             device_panel_json['targets'][1]['legendFormat'] = dashboard_config['messages'][language]['device_dashboard']['temperature']['title']
             device_panel_json['targets'][1]['refId'] = "B"
@@ -534,14 +534,14 @@ def main():
             createTeam(dir_name+"_"+str(dev_name)+'_viewer')
             teams[dir_name+"_"+str(dev_name)+'_viewer']=list()
             addTeamToDashboard(dir_name+"_"+str(dev_name)+'_viewer', folder['title'], str(dev_name), 'Viewer')
-            addTeamToDashboard(dir_name+"_"+str(dev_name)+'_viewer', folder['title'], str(dev_name)+' CO2', 'Viewer')
+            addTeamToDashboard(dir_name+"_"+str(dev_name)+'_viewer', folder['title'], str(dev_name)+' PM25', 'Viewer')
 
             viewer = device["viewer"]
             for user in viewer:
               print("      Adding user \'"+user+"\' to \'"+dir_name+"_"+str(dev_name)+"_viewer\' team...")
               teams[dir_name+"_"+str(dev_name)+'_viewer'].append(user)
               addUserToTeam(user,dir_name+"_"+str(dev_name)+'_viewer')
-              update_user_preferences(user,{'homeDashboardId': device_CO2_dashboard['id']})
+              update_user_preferences(user,{'homeDashboardId': device_PM25_dashboard['id']})
 
           #Add all users listed as editor to the device viewer team
           if ("editor" in device):
