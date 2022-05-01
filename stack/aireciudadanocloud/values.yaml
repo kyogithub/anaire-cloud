@@ -26,26 +26,26 @@ smtp_from: your sender name
 resources:
   mqttbroker:
     requests:
-      memory: "120Mi"
-      cpu: "100m"
-      ephemeral-storage: "300Mi"
+      memory: "100Mi"
+      cpu: "75m"
+      ephemeral-storage: "200Mi"
     limits:
-      memory: "180Mi"
-      cpu: "150m"
-      ephemeral-storage: "400Mi"
+      memory: "150Mi"
+      cpu: "125m"
+      ephemeral-storage: "300Mi"
   mqttforward:
     requests:
       memory: "150Mi"
-      cpu: "100m"
-      ephemeral-storage: "300Mi"
+      cpu: "75m"
+      ephemeral-storage: "200Mi"
     limits:
-      memory: "250Mi"
-      cpu: "150m"
-      ephemeral-storage: "400Mi"
+      memory: "200Mi"
+      cpu: "125m"
+      ephemeral-storage: "300Mi"
   pushgateway:
     requests:
       memory: "150Mi"
-      cpu: "150m"
+      cpu: "125m"
       ephemeral-storage: "300Mi"
     limits:
       memory: "250Mi"
@@ -54,29 +54,29 @@ resources:
   prometheus:
     requests:
       memory: "700Mi"
-      cpu: "250m"
-      ephemeral-storage: "1Gi"
+      cpu: "150m"
+      ephemeral-storage: "1200Mi"
     limits:
-      memory: "1200Mi"
-      cpu: "350m"
+      memory: "1Gi"
+      cpu: "250m"
       ephemeral-storage: "1.5Gi"
   grafana:
     requests:
-      memory: "600Mi"
+      memory: "500Mi"
       cpu: "250m"
-      ephemeral-storage: "900Mi"
+      ephemeral-storage: "800Mi"
     limits:
-      memory: "900Mi"
-      cpu: "500m"
+      memory: "800Mi"
+      cpu: "400m"
       ephemeral-storage: "1200Mi"
   grafanaimagerenderer:
     requests:
-      memory: "1.5Gi"
-      cpu: "600m"
+      memory: "1.3Gi"
+      cpu: "450m"
       ephemeral-storage: "2Gi"
     limits:
-      memory: "2Gi"
-      cpu: "800m"
+      memory: "1.8Gi"
+      cpu: "700m"
       ephemeral-storage: "2.5Gi"
   apiserver:
     requests:
@@ -98,10 +98,10 @@ resources:
       ephemeral-storage: "300Mi"
   nginx:
     requests:
+      memory: "150Mi"
+      cpu: "150m"
+      ephemeral-storage: "250Mi"
+    limits:
       memory: "250Mi"
       cpu: "250m"
-      ephemeral-storage: "350Mi"
-    limits:
-      memory: "350Mi"
-      cpu: "350m"
-      ephemeral-storage: "500Mi"
+      ephemeral-storage: "400Mi"
