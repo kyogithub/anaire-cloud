@@ -439,8 +439,8 @@
       {
         "current": {
           "selected": false,
-          "text": "mqtt.anaire.org",
-          "value": "mqtt.anaire.org"
+          "text": "sensor.aireciudadano.com",
+          "value": "sensor.aireciudadano.com"
         },
         "error": null,
         "hide": 0,
@@ -449,11 +449,11 @@
         "options": [
           {
             "selected": true,
-            "text": "mqtt.anaire.org",
-            "value": "mqtt.anaire.org"
+            "text": "sensor.aireciudadano.com",
+            "value": "sensor.aireciudadano.com"
           }
         ],
-        "query": "mqtt.anaire.org",
+        "query": "sensor.aireciudadano.com",
         "skipUrlSync": false,
         "type": "textbox"
       },
