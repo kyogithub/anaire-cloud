@@ -56,7 +56,7 @@ data:
     pip install unidecode
     pip install -U grafana_api
     cd /root/
-    git clone https://github.com/anaireorg/anaire-cloud.git
+    git clone https://github.com/danielbernalb/aireciudadano-cloud.git
     while ((1))
     do
       python /config/api_server.py grafana-np:3000 "{{ .Values.grafanaAdminPass }}" mqtt-np:1883

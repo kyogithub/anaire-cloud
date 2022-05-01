@@ -8,7 +8,7 @@ if [ "$confirmation" != "borrar" ]; then
         exit
 fi
 echo "Eliminando stack helm"
-microk8s.helm3 uninstall anairestack
+microk8s.helm3 uninstall aireciudadanostack
 echo "Borrando datos persistentes"
 sudo rm -rf /data
 for application in prometheus pushgateway grafana mosquitto letsencrypt
