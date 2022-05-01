@@ -45,7 +45,7 @@ resources:
   pushgateway:
     requests:
       memory: "150Mi"
-      cpu: "125m"
+      cpu: "150m"
       ephemeral-storage: "300Mi"
     limits:
       memory: "250Mi"
