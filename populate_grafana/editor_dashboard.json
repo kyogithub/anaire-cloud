@@ -26,14 +26,6 @@
         "orientation": "center",
         "params": [
           [
-            "alarm",
-            "$Alarm"
-          ],
-          [
-            "caution",
-            "$Caution"
-          ],
-          [
             "db_uid",
             "$db_uid"
           ],
@@ -54,19 +46,8 @@
             "$update"
           ],
           [
-            "warning",
-            "$Warning"
-          ],
-          [
             "factory_reset",
             "$factory_reset"
-          ],          [
-            "FRC",
-            "$FRC"
-          ],
-          [
-            "FRC_value",
-            "$FRC_value"
           ],
           [
             "MQTT_server",
@@ -77,22 +58,9 @@
             "$MQTT_port"
           ],
           [
-            "ABC",
-            "$ABC"
-          ],
-          [
             "reboot",
             "$reboot"
           ],
-          [
-            "temperature_offset",
-            "$temperature_offset"
-          ],
-          [
-            "altitude_compensation",
-            "$altitude_compensation"
-          ]
-        ],
         "password": "password",
         "text": "Update",
         "type": "query",
@@ -156,198 +124,6 @@
         "queryValue": "",
         "skipUrlSync": false,
         "type": "constant"
-      },
-      {
-        "current": {
-          "selected": true,
-          "text": "700",
-          "value": "700"
-        },
-        "error": null,
-        "hide": 0,
-        "label": "Warning Threshold Value",
-        "name": "Warning",
-        "options": [
-          {
-            "selected": true,
-            "text": "700",
-            "value": "700"
-          }
-        ],
-        "query": "700",
-        "skipUrlSync": false,
-        "type": "textbox"
-      },
-      {
-        "current": {
-          "selected": false,
-          "text": "1000",
-          "value": "1000"
-        },
-        "error": null,
-        "hide": 0,
-        "label": "Alarm Threshold Value",
-        "name": "Caution",
-        "options": [
-          {
-            "selected": true,
-            "text": "1000",
-            "value": "1000"
-          }
-        ],
-        "query": "1000",
-        "skipUrlSync": false,
-        "type": "textbox"
-      },
-      {
-        "allValue": null,
-        "current": {
-          "selected": false,
-          "text": "ON",
-          "value": "ON"
-        },
-        "error": null,
-        "hide": 0,
-        "includeAll": false,
-        "label": "Sound Alarm",
-        "multi": false,
-        "name": "Alarm",
-        "options": [
-          {
-            "selected": true,
-            "text": "ON",
-            "value": "ON"
-          },
-          {
-            "selected": false,
-            "text": "OFF",
-            "value": "OFF"
-          }
-        ],
-        "query": "ON,OFF",
-        "skipUrlSync": false,
-        "type": "custom"
-      },
-      {
-        "current": {
-          "selected": false,
-          "text": "0",
-          "value": "0"
-        },
-        "error": null,
-        "hide": 0,
-        "label": "Temperature Offset",
-        "name": "temperature_offset",
-        "options": [
-          {
-            "selected": true,
-            "text": "0",
-            "value": "0"
-          }
-        ],
-        "query": "0",
-        "skipUrlSync": false,
-        "type": "textbox"
-      },
-      {
-        "current": {
-          "selected": false,
-          "text": "0",
-          "value": "0"
-        },
-        "error": null,
-        "hide": 0,
-        "label": "Altitude Compensation",
-        "name": "altitude_compensation",
-        "options": [
-          {
-            "selected": true,
-            "text": "0",
-            "value": "0"
-          }
-        ],
-        "query": "0",
-        "skipUrlSync": false,
-        "type": "textbox"
-      },
-      {
-        "allValue": null,
-        "current": {
-          "selected": false,
-          "text": "OFF",
-          "value": "OFF"
-        },
-        "error": null,
-        "hide": 0,
-        "includeAll": false,
-        "label": "Perform Forced Recalibration",
-        "multi": false,
-        "name": "FRC",
-        "options": [
-          {
-            "selected": true,
-            "text": "OFF",
-            "value": "OFF"
-          },
-          {
-            "selected": false,
-            "text": "ON",
-            "value": "ON"
-          }
-        ],
-        "query": "OFF,ON",
-        "skipUrlSync": false,
-        "type": "custom"
-      },
-      {
-        "current": {
-          "selected": false,
-          "text": "400",
-          "value": "400"
-        },
-        "error": null,
-        "hide": 0,
-        "label": "Forced Recalibration Value",
-        "name": "FRC_value",
-        "options": [
-          {
-            "selected": true,
-            "text": "400",
-            "value": "400"
-          }
-        ],
-        "query": "400",
-        "skipUrlSync": false,
-        "type": "textbox"
-      },
-      {
-        "allValue": null,
-        "current": {
-          "selected": false,
-          "text": "OFF",
-          "value": "OFF"
-        },
-        "error": null,
-        "hide": 0,
-        "includeAll": false,
-        "label": "Auto Baseline Correction (ABC)",
-        "multi": false,
-        "name": "ABC",
-        "options": [
-          {
-            "selected": true,
-            "text": "OFF",
-            "value": "OFF"
-          },
-          {
-            "selected": false,
-            "text": "ON",
-            "value": "ON"
-          }
-        ],
-        "query": "OFF,ON",
-        "skipUrlSync": false,
-        "type": "custom"
       },
       {
         "allValue": null,
