@@ -76,8 +76,8 @@ data:
                   'CO2 ' + str(payload.pop('CO2', 0)) + '\n' + \
                   'VOC ' + str(payload.pop('VOC', 0)) + '\n' + \
                   'NOx ' + str(payload.pop('NOx', 0)) + '\n' + \
-                  'Temperature ' + str(payload.pop('temperature', 0)) + '\n' + \
                   'Humidity ' + str(payload.pop('humidity', 0)) + '\n' + \
+                  'Temperature ' + str(payload.pop('temperature', 0)) + '\n' + \
                   'Noise ' + str(payload.pop('noisedba', 0)) + '\n' + \
                   'RSSI ' + str(payload.pop('RSSI', 0)) + '\n' + \
                   'Latitude ' + str(payload.pop('latitude', 0)) + '\n' + \
