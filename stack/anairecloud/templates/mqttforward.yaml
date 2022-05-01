@@ -78,12 +78,15 @@ data:
                   'NOx ' + str(payload.pop('NOx', 0)) + '\n' + \
                   'Temperature ' + str(payload.pop('temperature', 0)) + '\n' + \
                   'Humidity ' + str(payload.pop('humidity', 0)) + '\n' + \
+                  'Noise ' + str(payload.pop('noisedba', 0)) + '\n' + \
+                  'RSSI ' + str(payload.pop('RSSI', 0)) + '\n' + \
                   'Latitude ' + str(payload.pop('latitude', 0)) + '\n' + \
                   'Longitude ' + str(payload.pop('longitude', 0)) + '\n' + \
-                  'RSSI ' + str(payload.pop('RSSI', 0)) + '\n' + \
-                  'Noise ' + str(payload.pop('noisedba', 0)) + '\n' + \
+                  'InOut ' + str(payload.pop('inout', 0)) + '\n' + \
+                  'ConfigVal ' + str(payload.pop('configval', 0)) + '\n' + \
                   'Var1 ' + str(payload.pop('datavar1', 0)) + '\n' + \
                   'Var2 ' + str(payload.pop('datavar2', 0)) + '\n'
+
             URL  = 'http://' + sys.argv[1] + ':9091/metrics/job/' + str(device_id)
             pushdata(msg, URL)
         else:
