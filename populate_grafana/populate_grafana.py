@@ -199,7 +199,7 @@ def main():
         print("Creating user "+user['login']+"...")
         user['password']=get_user_password(user['login'],info=user)
         createUser(user)
-        #content = update_user_preferences(user['login'],{'theme': 'light'})
+        content = update_user_preferences(user['login'],{'theme': 'light'})
 
       #Add all users listed as vierwer to the 'general_viewer' team
       if ("viewer" in config):
