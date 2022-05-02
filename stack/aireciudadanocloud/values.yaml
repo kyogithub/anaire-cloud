@@ -55,29 +55,29 @@ resources:
     requests:
       memory: "700Mi"
       cpu: "150m"
-      ephemeral-storage: "1000Mi"
+      ephemeral-storage: "1Gi"
     limits:
-      memory: "1000Mi"
+      memory: "1Gi"
       cpu: "250m"
-      ephemeral-storage: "1500Mi"
+      ephemeral-storage: "1.5Gi"
   grafana:
     requests:
-      memory: "450Mi"
-      cpu: "300m"
-      ephemeral-storage: "800Mi"
+      memory: "400Mi"
+      cpu: "150m"
+      ephemeral-storage: "700Mi"
     limits:
-      memory: "800Mi"
-      cpu: "450m"
-      ephemeral-storage: "1000Mi"
+      memory: "700Mi"
+      cpu: "400m"
+      ephemeral-storage: "1Gi"
   grafanaimagerenderer:
     requests:
-      memory: "1300Mi"
+      memory: "1.3Gi"
       cpu: "450m"
-      ephemeral-storage: "2000Mi"
+      ephemeral-storage: "2Gi"
     limits:
-      memory: "1800Mi"
+      memory: "1.8Gi"
       cpu: "700m"
-      ephemeral-storage: "2500Mi"
+      ephemeral-storage: "2.5Gi"
   apiserver:
     requests:
       memory: "150Mi"
