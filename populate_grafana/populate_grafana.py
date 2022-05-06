@@ -615,9 +615,9 @@ def main():
       items_list = json.loads(requests.get(url=items_list_url, headers=HEADERS).content)
       for item in items_list:
         if not item['id'] in valid_ids:
-          print('Deleting uid='+item['uid'])
-          items_list_url = 'http://' + GRAFANA_URL + '/api/dashboards/uid/'+item['uid']
-          requests.delete(url=items_list_url, headers=HEADERS)
+          print('Some dashboards are not in the list ='+item['uid'])
+          #items_list_url = 'http://' + GRAFANA_URL + '/api/dashboards/uid/'+item['uid']
+          #requests.delete(url=items_list_url, headers=HEADERS)
 
     except yaml.YAMLError as exc:
       print(exc)
