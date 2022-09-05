@@ -85,6 +85,10 @@ data:
                   'InOut ' + str(payload.pop('inout', 0)) + '\n' + \
                   'ConfigVal ' + str(payload.pop('configval', 0)) + '\n' + \
                   'PM25raw ' + str(payload.pop('PM25raw', 0)) + '\n' + \
+                  'NoisePeak ' + str(payload.pop('noisepeak', 0)) + '\n' + \
+                  'PM252 ' + str(payload.pop('PM252', 0)) + '\n' + \
+                  'PM10 ' + str(payload.pop('PM10', 0)) + '\n' + \
+                  'MAC ' + str(payload.pop('mac', 0)) + '\n' + \
                   'Var1 ' + str(payload.pop('datavar1', 0)) + '\n' + \
                   'Var2 ' + str(payload.pop('datavar2', 0)) + '\n'
 
