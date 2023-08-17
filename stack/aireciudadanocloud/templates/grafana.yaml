@@ -14,9 +14,11 @@ spec:
     spec:
       containers:
         - name: grafana
-          image: grafana/grafana:10.0.2
+          image: grafana/grafana:10.0.3
           env:
           - name: GF_AUTH_ANONYMOUS_ENABLED
+            value: "true"
+          - name: GF_SECURITY_ALLOW_EMBEDDING
             value: "true"
           - name: GF_SECURITY_ADMIN_PASSWORD
             value: "{{ .Values.grafanaAdminPass }}"
