@@ -42,7 +42,7 @@ resources:
       memory: "200Mi"
       cpu: "125m"
       ephemeral-storage: "300Mi"
-  pushgateway:
+  pushgateway:                        #Son limitados los valores en que funciona bien
     requests:
       memory: "150Mi"
       cpu: "125m"
@@ -87,7 +87,7 @@ resources:
       memory: "250Mi"
       cpu: "250m"
       ephemeral-storage: "400Mi"
-  cleanercronjob:
+  cleanercronjob:                     #Son limitados los valores en que funciona bien
     requests:
       memory: "75Mi"
       cpu: "120m"
