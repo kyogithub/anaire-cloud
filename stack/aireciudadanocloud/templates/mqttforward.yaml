@@ -90,7 +90,8 @@ data:
                   'PM252 ' + str(payload.pop('PM252', 0)) + '\n' + \
                   'PM1 ' + str(payload.pop('PM1', 0)) + '\n' + \
                   'MAC ' + str(payload.pop('mac', 0)) + '\n' + \
-                  'Var ' + str(payload.pop('datavar', 0)) + '\n' + \
+                  'Var1 ' + str(payload.pop('datavar1', 0)) + '\n' + \
+                  'Var2 ' + str(payload.pop('datavar2', 0)) + '\n'
 
             URL  = 'http://' + sys.argv[1] + ':9091/metrics/job/' + str(device_id)
             pushdata(msg, URL)
