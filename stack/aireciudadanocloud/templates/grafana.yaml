@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: grafana
-          image: grafana/grafana:10.2.2
+          image: grafana/grafana:10.2.3
           env:
           - name: GF_AUTH_ANONYMOUS_ENABLED
             value: "true"
@@ -91,6 +91,7 @@ data:
         version: 1
         editable: true
         isDefault: true
+        scrape_interval: 60
 ---
 apiVersion: v1
 kind: Service
