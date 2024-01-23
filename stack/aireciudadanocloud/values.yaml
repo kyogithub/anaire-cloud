@@ -41,7 +41,7 @@ resources:
   pushgateway:
     requests:
       memory: "150Mi"
-      cpu: "125m"
+      cpu: "130m"
       ephemeral-storage: "300Mi"
     limits:
       memory: "250Mi"
@@ -68,7 +68,7 @@ resources:
   apiserver:
     requests:
       memory: "200Mi"
-      cpu: "175m"
+      cpu: "180m"
       ephemeral-storage: "300Mi"
     limits:
       memory: "300Mi"
@@ -76,16 +76,16 @@ resources:
       ephemeral-storage: "450Mi"
   cleanercronjob:
     requests:
-      memory: "75Mi"
+      memory: "90Mi"
       cpu: "120m"
       ephemeral-storage: "150Mi"
     limits:
       memory: "200Mi"
-      cpu: "150m"
+      cpu: "170m"
       ephemeral-storage: "300Mi"
   nginx:
     requests:
-      memory: "200Mi"
+      memory: "20Mi"
       cpu: "200m"
       ephemeral-storage: "350Mi"
     limits:
