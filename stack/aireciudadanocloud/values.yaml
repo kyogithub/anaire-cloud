@@ -3,11 +3,7 @@
 # Declare variables to be passed into your templates.
 
 #Your VM Public IPv4 address or Public IPv4 DNS
-publicIP: sensor.aireciudadano.org
-
-#If a secondary IPv4 or dns is used uncomment the following variable
-#secondaryPublicIP: sensor.aireciudadano.org
-
+publicIP: sensor.aireciudadano.com
 
 #Your Grafana admin password
 grafanaAdminPass: yourgrafanaadminpassword
@@ -69,15 +65,6 @@ resources:
       memory: "1.4Gi"
       cpu: "700m"
       ephemeral-storage: "1.8Gi"
-#  grafanaimagerenderer:
-#    requests:
-#      memory: "1.3Gi" grafana600 promet500 nginx50 mqttbroker50 apiserver50
-#      cpu: "450m"     grafana150 promet150 nginx50 mqttbroker25 apiserve25
-#      ephemeral-storage: "2Gi"
-#    limits:
-#      memory: "1.8Gi" grafana700 promet600
-#      cpu: "700m"     grafana300 promet 200
-#      ephemeral-storage: "2.5Gi"
   apiserver:
     requests:
       memory: "200Mi"
