@@ -62,7 +62,7 @@ data:
       except requests.exceptions.RequestException as e:  # This is the correct syntax
         raise SystemExit(e)
 
-    def on_connect(client, userdata, flags, rc, properties):
+    def on_connect(client, userdata, flags, reason_code, properties):
         # connect mqtt broker
         client.subscribe([("measurement", 0)])
         
